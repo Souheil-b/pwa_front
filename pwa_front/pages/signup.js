@@ -13,7 +13,7 @@ export default function Signup() {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:5000/register', { email, password });
+      const res = await axios.post('https://nodejs-serverless-function-express-sigma-two-85.vercel.app/', { email, password });
       router.push('/login');
     } catch (err) {
       setError(err.response?.data?.message || 'An error occurred');

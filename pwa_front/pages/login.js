@@ -13,7 +13,7 @@ export default function Login() {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:5000/login', { email, password });
+      const res = await axios.post('https://nodejs-serverless-function-express-sigma-two-85.vercel.app/login', { email, password });
       localStorage.setItem('token', res.data.token);  // Stocker le token JWT
       await router.push('/profile');  // Rediriger vers la page de profil
     } catch (err) {

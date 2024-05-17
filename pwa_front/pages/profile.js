@@ -9,7 +9,7 @@ export default function Profile() {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/profile', {
+        const res = await axios.get('https://nodejs-serverless-function-express-sigma-two-85.vercel.app/profile', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
