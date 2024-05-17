@@ -1,5 +1,5 @@
 // app/page.js
-import NotificationButton from '../components/NotificationButton';
+import NotificationButton from './components/NotificationButton';
 
 export default function Home() {
   return (
