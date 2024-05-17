@@ -13,7 +13,8 @@ export default function Signup() {
     setError('');
 
     try {
-      const res = await axios.post('https://nodejs-serverless-function-express-sigma-two-85.vercel.app/', { email, password });
+      const res = await axios.post('https://nodejs-serverless-function-express-sigma-two-85.vercel.app/register', { email, password });
+      new Notification('Utilisateur créé');
       router.push('/login');
     } catch (err) {
       setError(err.response?.data?.message || 'An error occurred');
