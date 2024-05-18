@@ -10,6 +10,7 @@ export default function HomePage({ }) {
     const [selectedCountry, setSelectedCountry] = useState("");
     const [mealsByCountry, setMealsByCountry] = useState([]);
     const { searchMealsByCountry } = useMealApi();
+    const { searchMealById } = useMealApi();
 
     const countryList = [
         "Italian",
